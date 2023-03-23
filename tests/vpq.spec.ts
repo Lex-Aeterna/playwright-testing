@@ -9,7 +9,7 @@ const register = async (page) => {
 }
 
 test('Returns MBGC 1 USC', async ({ page }) => {
-  await page.goto('http://localhost:3006/');
+  await page.goto('https://explore-staging.boundless.com/');
   await page.getByRole('button', { name: 'Continue' }).click();
 
   await page.getByPlaceholder('First Name').click();
@@ -38,7 +38,7 @@ test('Returns MBGC 1 USC', async ({ page }) => {
 });
 
 test('Returns Spousal Visa 3', async ({ page }) => {
-  await page.goto('http://localhost:3006/');
+  await page.goto('https://explore-staging.boundless.com/');
   await page.getByRole('button', { name: 'Continue' }).click();
 
   await page.getByPlaceholder('First Name').click();
@@ -75,7 +75,7 @@ test('Returns Spousal Visa 3', async ({ page }) => {
 });
 
 test('Returns Mixed Result - Spousal 8/Fiance 4', async ({ page }) => {
-  await page.goto('http://localhost:3006/');
+  await page.goto('https://explore-staging.boundless.com/');
   await page.getByRole('button', { name: 'Continue' }).click();
 
   await page.getByPlaceholder('First Name').click();
