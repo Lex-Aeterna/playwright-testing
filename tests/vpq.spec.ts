@@ -48,7 +48,7 @@ test('Returns Spousal Visa 3', async ({ page }) => {
   await page.getByRole('button', { name: 'Radio No No' }).click();
   await page.getByRole('button', { name: 'Next' }).click();
 
-  await expect(page.getByRole('heading', { name: 'Are you a U.S. legal permanent resident (also known as a green card holder)?' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Are you a U.S. lawful permanent resident (also known as a green card holder)?' })).toBeVisible();
   await page.getByRole('button', { name: 'Radio Yes Yes' }).click();
   await page.getByRole('button', { name: 'Next' }).click();
 
@@ -85,7 +85,7 @@ test('Returns Mixed Result - Spousal 8/Fiance 4', async ({ page }) => {
   await page.getByRole('button', { name: 'Radio No No' }).click();
   await page.getByRole('button', { name: 'Next' }).click();
 
-  await expect(page.getByRole('heading', { name: 'Are you a U.S. legal permanent resident (also known as a green card holder)?' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Are you a U.S. lawful permanent resident (also known as a green card holder)?' })).toBeVisible();
   await page.getByRole('button', { name: 'Radio No No' }).click();
   await page.getByRole('button', { name: 'Next' }).click();
 
