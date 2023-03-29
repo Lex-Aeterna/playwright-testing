@@ -9,6 +9,8 @@ const register = async (page) => {
 }
 
 test('Returns MBGC 1 USC', async ({ page }) => {
+  page.setDefaultTimeout( 10000 )
+
   await page.goto('https://explore-staging.boundless.com/');
   await page.getByRole('button', { name: 'Continue' }).click();
 
@@ -34,10 +36,11 @@ test('Returns MBGC 1 USC', async ({ page }) => {
 
   await register(page)
 
-  await expect(page.getByTestId('result-type-heading')).toHaveText('Marriage Green Card', { timeout: 10000 });
+  await expect(page.getByTestId('result-type-heading')).toHaveText('Marriage Green Card');
 });
 
 test('Returns Spousal Visa 3', async ({ page }) => {
+  page.setDefaultTimeout( 10000 )
   await page.goto('https://explore-staging.boundless.com/');
   await page.getByRole('button', { name: 'Continue' }).click();
 
@@ -71,10 +74,11 @@ test('Returns Spousal Visa 3', async ({ page }) => {
 
   await register(page)
 
-  await expect(page.getByTestId('result-type-heading')).toHaveText('Spousal Visa', { timeout: 10000 });
+  await expect(page.getByTestId('result-type-heading')).toHaveText('Spousal Visa');
 });
 
 test('Returns Mixed Result - Spousal 8/Fiance 4', async ({ page }) => {
+  page.setDefaultTimeout( 10000 )
   await page.goto('https://explore-staging.boundless.com/');
   await page.getByRole('button', { name: 'Continue' }).click();
 
